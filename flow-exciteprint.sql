@@ -23,7 +23,7 @@ begin
 	set @TOTAL = @TOTAL + @NUMBER
 	set @NUMBER = @NUMBER + 1
 end
-print @TOTAL
+print concat(@FACT, '! = ', @TOTAL)
 
 /*
 if 1+5=0 begin
