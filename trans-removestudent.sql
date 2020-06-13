@@ -2,10 +2,10 @@ begin transaction
 
 delete student
 	where Lastname = 'foster';
-
-commit transaction
-
-rollback transaction
+if @@error <> 0
+	rollback transaction
+else
+	commit transaction
 
 select *
 	from student s
