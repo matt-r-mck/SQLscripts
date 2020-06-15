@@ -31,3 +31,6 @@ INSERT Customers
 go
 
 select * from customers
+
+ALTER TABLE customers
+	ALTER COLUMN StateCode varchar(2) not null default 'OH';
